@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { Switch, BrowserRouter, Route } from "react-router-dom";
+import {ShoppingBasket } from "./components";
 import {
   LoginContainer,
   MainContainer,
@@ -14,6 +15,7 @@ const App: FC<{}> = () => {
       <S.GlobalStyle />
       <S.Container>
         <Switch>
+          <Route path="/shop" component={ShoppingBasket} />
           <Route exact path="/" component={MainContainer} />
           <Route exact path="/login" component={LoginContainer} />
           <Route exact path="/register" component={RegisterContainer} />
