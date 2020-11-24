@@ -5,20 +5,28 @@ export const HeaderWrapper = styled.div`
   background: white;
   height: 150px;
   min-width: 100%;
+
+  > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+`;
+
+export const RightWrap = styled.div`
   display: flex;
   align-items: center;
-  padding: 0 200px;
-  box-sizing: border-box;
 `;
 
 export const HeaderContents = styled.div`
   display: flex;
-  margin-right: 225px;
+  align-items: center;
 `;
 
 export const LogoImg = styled.img`
   margin-right: 115px;
-  transform: translateY(-18px);
 `;
 
 export const NavigationWrapper = styled.div`
@@ -47,7 +55,6 @@ export const InputWrapper = styled.div`
   align-items: center;
   overflow: hidden;
   margin-right: 45px;
-  transform: translateY(-10px);
 `;
 
 export const SearchInput = styled.input`
@@ -73,5 +80,4 @@ export const ButtonWrapper = styled.button<ButtonProps>`
   outline: none;
   cursor: pointer;
   background: none;
-  transform: ${props => (props.y === "-10px" ? "translateY(-10px)" : "none")};
 `;
