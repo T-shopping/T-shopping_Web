@@ -30,3 +30,30 @@ export const WitdhDiv = styled.div<{ width: number }>`
   width: ${props => props.width}px;
   margin: 0 auto;
 `;
+
+export const GlobalInput = styled.input`
+  padding: 10px;
+  color: #707070;
+  box-sizing: border-box;
+  border: 2px solid #c4c4c4;
+`;
+
+export const WriteBtn = styled.button`
+  width: 100px;
+  height: 45px;
+  background-color: #c4c4c4;
+  border: none;
+  color: white;
+  font-size: 20px;
+  transition: 0.25s all;
+
+  &:hover {
+    background-color: #5aa1ff;
+  }
+`;
+
+export const SubMitBtn = styled.button`
+  background-color: #5aa1ff;
+  border: none;
+  color: white;
+`;
