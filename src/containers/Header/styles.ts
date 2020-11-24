@@ -7,22 +7,10 @@ export const HeaderWrapper = styled.div`
   min-width: 100%;
   display: flex;
   align-items: center;
-<<<<<<< Updated upstream
   padding: 0 200px;
   box-sizing: border-box;
 `;
 
-=======
-  justify-content: center;
-  box-sizing: border-box;
-`;
-
-export const HeaderContentsWrapper = styled.div`
-  display: flex;
-  min-width: 1410px;
-`;
-
->>>>>>> Stashed changes
 export const HeaderContents = styled.div`
   display: flex;
   margin-right: 225px;
