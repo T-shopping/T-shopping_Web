@@ -1,8 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const Container = styled.div`
-  padding-right: 0px;
-`;
+export const Container = styled.div``;
 
 export const CategoryList = styled.div`
   margin-top: 30px;
