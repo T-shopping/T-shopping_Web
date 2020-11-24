@@ -1,4 +1,5 @@
 export { default as Main } from "./Main/Main";
+export { default as ProductPage } from "./ProductPage/ProductPage";
 export { default as ProductCommunity } from "./ProductCommunity/ProductCommunity";
 export { default as ShoppingBasket } from "./ShoppingBasket/ShoppingBasket";
 export { default as Login } from "./Login/Login";
