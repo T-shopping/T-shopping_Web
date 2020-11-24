@@ -10,6 +10,7 @@ export const Container = styled.div`
     padding-top: 100px;
     min-height: 800px;
     box-sizing: border-box;
+    transform: translateY(-50px);
   }
 
   height: 100vh;
@@ -37,12 +38,11 @@ export const Header = styled.div`
 
 export const Background = styled.div`
   position: absolute;
-  top: 200px;
+  top: 230px;
   width: 800px;
   z-index: -1;
-  height: calc(100% - 200px);
-  min-height: 750px;
-  background-color: #616161;
+  height: 660px;
+  background-color: #515151;
 `;
 
 export const MoreBtn = styled.span`
