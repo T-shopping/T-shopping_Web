@@ -3,18 +3,28 @@ import { MoreBtn, MoreDiv } from "../../Main/styles";
 import PostItem from "./PostItem/PostItem";
 import * as S from "./styles";
 
-const BoardItem: FC = () => {
+export interface BoardItem {
+  title: string;
+  date: string;
+}
+
+interface Props {
+  title: string;
+  data: BoardItem[];
+}
+
+const BoardItem: FC<Props> = ({ title, data }) => {
   return (
     <S.Container>
       <S.Header>
-        <span>제품리뷰</span>
+        <span>{title}</span>
         <MoreDiv>
           <MoreBtn>더보기&gt;</MoreBtn>
         </MoreDiv>
       </S.Header>
       <S.Bar />
-      <PostItem />
-      <PostItem />
+      <PostItem title={data[0].title} date={data[0].date} />
+      <PostItem title={data[1].title} date={data[1].date} />
     </S.Container>
   );
 };
