@@ -9,7 +9,30 @@ export const Background = styled.div`
   transition: 0.25s all;
   height: 100%;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   background-color: rgba(0, 0, 0, 0.7);
+`;
+
+export const Detail = styled.div`
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: white;
+`;
+
+export const Bar = styled.div`
+  width: 50px;
+  height: 1px;
+  background-color: white;
+  margin: 20px 0;
+`;
+
+export const Price = styled.span`
+  font-size: 16px;
+  color: #707070;
 `;
 
 export const PeopleNum = styled.div`
@@ -30,10 +53,6 @@ export const Container = styled.div<{ src: string }>`
   background-size: cover;
   position: relative;
   background-position: center;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 
   & + & {
     margin-left: 30px;
