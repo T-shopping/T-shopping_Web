@@ -1,47 +1,49 @@
 import React, { FC } from "react";
-import { NavLink, BrowserRouter } from "react-router-dom";
+import { NavLink, BrowserRouter, Link } from "react-router-dom";
 import * as S from "./styles";
 import searchIcon from "../../assets/searchIcon.png";
 import logo from "../../assets/logo.png";
 import profileIcon from "../../assets/topbarProfileIcon.png";
 import { WitdhDiv } from "../../GlobalStyle";
 
-const Header = () => {
+interface NavItem {
+  name: string;
+  url: string;
+}
+
+const navStaic: NavItem[] = [
+  {
+    name: "전체상품",
+    url: "/product/list/interior"
+  },
+  {
+    name: "장바구니",
+    url: "/apply/now"
+  },
+  {
+    name: "그룹관리",
+    url: "/group"
+  },
+  {
+    name: "커뮤니티",
+    url: "/review"
+  }
+];
+
+const Header: FC = ({ children }) => {
   return (
     <S.HeaderWrapper>
       <WitdhDiv width={1400}>
         <S.HeaderContents>
-          <S.LogoImg src={logo} />
+          <Link to="/">
+            <S.LogoImg src={logo} />
+          </Link>
           <S.NavigationWrapper>
-            <NavLink
-              exact
-              to="/"
-              activeStyle={{ color: "#4f4fcc" }}
-              style={S.Navigation}
-            >
-              전체상품
-            </NavLink>
-            <NavLink
-              to="/a"
-              activeStyle={{ color: "#4f4fcc" }}
-              style={S.Navigation}
-            >
-              장바구니
-            </NavLink>
-            <NavLink
-              to="/s"
-              activeStyle={{ color: "#4f4fcc" }}
-              style={S.Navigation}
-            >
-              그룹관리
-            </NavLink>
-            <NavLink
-              to="/xzc"
-              activeStyle={{ color: "#4f4fcc" }}
-              style={S.Navigation}
-            >
-              커뮤니티
-            </NavLink>
+            {navStaic.map(({ name, url }) => (
+              <S.NavLink to={url} isActive={name === children}>
+                {name}
+              </S.NavLink>
+            ))}
           </S.NavigationWrapper>
         </S.HeaderContents>
         <S.RightWrap>

@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import { Link } from "react-router-dom";
+import styled, { css } from "styled-components";
 
 export const HeaderWrapper = styled.div`
   background: white;
@@ -13,6 +14,19 @@ export const HeaderWrapper = styled.div`
     justify-content: space-between;
     box-sizing: border-box;
   }
+`;
+export const NavLink = styled(Link)<{ isActive: boolean }>`
+  font-size: 20px;
+  margin-right: 40px;
+  color: #707070;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  ${props =>
+    props.isActive &&
+    css`
+      color: #5aa1ff;
+    `};
 `;
 
 export const RightWrap = styled.div`
@@ -32,15 +46,6 @@ export const LogoImg = styled.img`
 export const NavigationWrapper = styled.div`
   white-space: nowrap;
 `;
-
-export const Navigation = {
-  fontSize: "20px",
-  marginRight: "40px",
-  color: "#707070",
-  cursor: "pointer",
-  textDecoration: "none",
-  whiteSpace: "nowrap"
-} as React.CSSProperties;
 
 export const InputWrapper = styled.div`
   background: #efefef;
