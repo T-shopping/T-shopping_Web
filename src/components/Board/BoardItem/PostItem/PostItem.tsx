@@ -1,11 +1,12 @@
 import React, { FC } from "react";
+import { BoardItem } from "../BoardItem";
 import * as S from "./styles";
 
-const PostItem: FC = () => {
+const PostItem: FC<BoardItem> = ({ title, date }) => {
   return (
     <S.Container>
-      <S.PostTitle>고양이 무드등 리뷰</S.PostTitle>
-      <S.PostTitle>2020.11.23</S.PostTitle>
+      <S.PostTitle>{title}</S.PostTitle>
+      <S.PostTitle>{date}</S.PostTitle>
     </S.Container>
   );
 };
