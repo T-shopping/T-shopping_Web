@@ -1,12 +1,30 @@
 import React, { FC } from "react";
-import { groupImg } from "../../../assets";
+import { groupImg, king } from "../../../assets";
+import { FailBtn } from "../../Modal/styles";
 import * as S from "./styles";
 
-const GroupItem: FC = () => {
+interface Props {
+  name: string;
+  owner: string;
+  text: string;
+}
+
+const GroupItem: FC<Props> = ({ name, owner, text }) => {
   return (
     <S.Container>
       <img src={groupImg} />
-      <span>쇼핑 그룹</span>
+      <span>{name} 그룹</span>
+      <S.Background>
+        <S.Info>
+          <img src={king} />
+          {owner}
+          <S.Bar />
+          <div>{text}</div>
+          <S.ButtonWrap>
+            <FailBtn>탈퇴하기</FailBtn>
+          </S.ButtonWrap>
+        </S.Info>
+      </S.Background>
     </S.Container>
   );
 };
