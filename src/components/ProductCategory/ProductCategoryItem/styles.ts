@@ -12,6 +12,11 @@ export const Container = styled.div<{ isActive: boolean }>`
 
   & div:nth-child(1) {
     font-size: 20px;
+    width: 80px;
+  }
+
+  > div:nth-child(2) {
+    width: 30px;
   }
 
   & div:nth-child(2) {
@@ -22,6 +27,6 @@ export const Container = styled.div<{ isActive: boolean }>`
     props.isActive &&
     css`
       background-color: white;
-      color: blue;
+      color: #707070;
     `}
 `;
