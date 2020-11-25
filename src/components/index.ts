@@ -1,7 +1,11 @@
 export { default as Main } from "./Main/Main";
-export { default as ProductPage } from "./ProductPage/ProductPage";
-export { default as ProductCommunity } from "./ProductCommunity/ProductCommunity";
-export { default as ShoppingBasket } from "./ShoppingBasket/ShoppingBasket";
 export { default as Login } from "./Login/Login";
 export { default as Register } from "./Register/Register";
 export { default as BoardWrite } from "./BoardWrite/BoardWrite";
+export { default as ProductPage } from "./ProductPage/ProductPage";
+export { default as ProductDetail } from "./ProductDetail/ProductDetail";
+export { default as ApplyNow } from "./Apply/ApplyNow";
+export { default as ApplyFinish } from "./Apply/ApplyFinish";
+export { default as Group } from "./Group/Group";
+export { default as Review } from "./Review/Review";
+export { default as Qa } from "./Qa/Qa";
