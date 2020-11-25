@@ -3,10 +3,21 @@ import { WitdhDiv, WriteBtn } from "../../GlobalStyle";
 
 export const Container = styled.div`
   width: 100%;
+  position: relative;
+`;
+
+export const X = styled.span`
+  position: absolute;
+  color: #b72929;
+  font-weight: bolder;
+  font-size: 30px;
+  right: 33px;
+  top: 35px;
 `;
 
 export const WriteWrap = styled.div`
   height: calc(100vh - 430px);
+  min-height: 520px;
   background-color: #f3f3f3;
   display: flex;
   justify-content: center;
@@ -26,9 +37,12 @@ export const Title = styled.div`
   font-size: 30px;
 `;
 
-export const WriteInput = styled.div<{ flex?: number }>`
-  margin-top: 30px;
+export const WriteInput = styled.input<{ flex?: number }>`
+  margin-top: 20px;
   width: 100%;
+  border: none;
+  font-size: 17px;
+  outline: none;
   border-bottom: 2px solid #c4c4c4;
   margin-bottom: 10px;
 
@@ -70,6 +84,7 @@ export const WriteForm = styled.div`
   padding: 40px;
   position: relative;
   margin-top: 20px;
+  z-index: 0;
   box-sizing: border-box;
   background-color: white;
 `;

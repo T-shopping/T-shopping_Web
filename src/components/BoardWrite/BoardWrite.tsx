@@ -1,23 +1,30 @@
 import React, { FC } from "react";
+import { useState } from "react";
 import Header from "../../containers/Header/Header";
 import { WitdhDiv } from "../../GlobalStyle";
 import Footer from "../Footer/Footer";
+import WriteModal from "../Modal/WriteModal/WriteModal";
+import useBlobUrl from "use-blob-url";
 import * as S from "./styles";
+import { X } from "../../assets";
 
 const BoardWrite: FC = () => {
+  const [state, setState] = useState<boolean>(false);
   return (
     <>
       <S.Container>
         <Header />
         <S.WriteWrap>
           <WitdhDiv width={800}>
-            <S.Title>게시물 작성</S.Title>
+            <S.Title>문의사항 작성</S.Title>
             <S.WriteForm>
-              <S.WriteImg />
+              <S.X>
+                <img src={X} onClick={() => setState(true)} />
+              </S.X>
               <S.FormContent>
-                <div>상품명</div>
+                <div>제목</div>
                 <S.WriteInput />
-                <S.FlexWrap>
+                {/* <S.FlexWrap>
                   <S.InputWrapper flex={4}>
                     <div>가격</div>
                     <S.WriteInput />
@@ -30,8 +37,8 @@ const BoardWrite: FC = () => {
                     <div>상품종류</div>
                     <S.WriteInput />
                   </S.InputWrapper>
-                </S.FlexWrap>
-                <div>제품설명</div>
+                </S.FlexWrap> */}
+                <div>문의 내용</div>
                 <S.WriteInput />
               </S.FormContent>
               <S.Button>작성</S.Button>
@@ -40,6 +47,7 @@ const BoardWrite: FC = () => {
         </S.WriteWrap>
       </S.Container>
       <Footer />
+      {state && <WriteModal />}
     </>
   );
 };
