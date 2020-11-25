@@ -10,6 +10,14 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'NanumSquare';
         font-weight:bold;
     }
+
+    button {
+      outline:none;
+    }
+
+    input[type=password] {
+      font-family:serif !important;
+    }
 `;
 
 export const BodyGlobalStyle = createGlobalStyle`
