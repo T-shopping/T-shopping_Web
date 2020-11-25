@@ -1,8 +1,11 @@
 import React, { FC } from "react";
+import { useHistory } from "react-router";
+import { plusBtn } from "../../assets";
 import { WitdhDiv } from "../../GlobalStyle";
 import * as S from "./styles";
 
 const Footer: FC = () => {
+  const history = useHistory();
   return (
     <S.Container>
       <WitdhDiv width={1400}>
@@ -15,6 +18,9 @@ const Footer: FC = () => {
           등 공동 구매를 목적으로 기획하게 되었습니다.
         </p>
       </WitdhDiv>
+      <S.Btn onClick={() => history.push("/write/post")}>
+        <img src={plusBtn} />
+      </S.Btn>
     </S.Container>
   );
 };
